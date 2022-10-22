@@ -10,7 +10,8 @@ func Add(numbers ...int) int {
 }
 
 func Subtract(numbers ...int) int {
-	result := 0
+	result := numbers[0]
+	numbers = append([]int{}, numbers[1:]...)
 	for _, number := range numbers {
 		result -= number
 	}
